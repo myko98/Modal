@@ -1,0 +1,140 @@
+.page-header {
+  background: grey;
+  padding: 20px;
+}
+
+.content-area {
+  background: #a3bef0;
+  height: 1500px;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
+  transform: scale(.8);
+  width: 80px;
+}
+
+.email-modal {
+  /* understand what position fixed does */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.7);
+
+  /*centering our modal*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*fade in effect*/
+  transition: all .4s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.email-modal--visible {
+  visibility:visible;
+  opacity: 1;
+}
+
+.email-modal__close-button {
+  position: fixed;
+  top:0;
+  right: 0;
+  padding: 20px;
+background:red;
+}
+
+.email-modal .gg-close {
+  color: white;
+}
+
+.gg-close {
+  /*increase the size of icon*/
+  --ggs:2;
+}
+
+.email-modal__container {
+  background: green;
+  max-width: 700px;
+  width: 100%;
+  color: white;
+  display: flex;
+  position: relative;
+  /*17:33 want everything to be inside the container. anything that goes outside container we hide*/
+  overflow: hidden
+}
+
+.email-modal__info {
+  width: 100%;
+  padding: 15px;
+  
+}
+
+.side-img {
+  max-height: 500px;
+  height: auto;
+}
+
+.email-modal__info .logo__sub {
+  margin-bottom: 4rem;
+}
+
+.email-modal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.email-modal__message {
+  color: rbga(221,221,221,0.63);
+  font-weight: 100;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.email-modal__highlight-text {
+  color: red;
+}
+
+.email-modal__form-group {
+  background: white;
+  /*why flex*/
+  display: flex;
+  padding: 5px;
+  margin-bottom: 1.2rem;
+}
+
+.email-modal__input {
+  background: white;
+  border: 0px solid;
+  width: 100%;
+  height: 30px;
+}
+
+.email-modal__button {
+  background: rgb(0, 255, 115);
+  color: white;
+  border: 0;
+  width: 150px;
+  cursor: pointer;
+}
+
+.email-modal__decline-offer {
+  color: rgba(108,148,199,1);
+  text-decoration: underline;
+  font-size: .9rem;
+  cursor: pointer;
+  /*30:39*/
+  transition: color .3s ease-in-out;
+}
+
+.email-modal__decline-offer:hover {
+  color: white;
+}
